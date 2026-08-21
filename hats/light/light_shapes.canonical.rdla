@@ -22,6 +22,7 @@ RdlMeshGeometry("/wall") {
     ["vertex_list_0"] = { Vec3(10, 4, 0), Vec3(-10, 4, 0), Vec3(-10, -4, 0), Vec3(10, -4, 0)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/wall.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 GeometrySet("/DEFAULT/allGeometry") {
@@ -39,7 +40,7 @@ UsdPreviewSurface("/DEFAULT/defaultMaterial") {
 }
 
 CylinderLight("/cylinderlight") {
-    ["node_xform"] = Mat4(-0, -1, -0, -0, 1, 0, 0, 0, 0, 0, 1, 0, 2, -1, 1, 1),
+    ["node_xform"] = Mat4(-0, -1, -0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 2, -1, 1, 1),
     ["color"] = Rgb(0.25, 1, 0.25),
     ["normalized"] = false,
     ["radius"] = 1.20000005,

@@ -13,79 +13,87 @@ ImageMap("/surfacing_floor/floorMap") {
 }
 
 RdlMeshGeometry("/box0") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.4375, -0.4375, 0.9375, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.4375, -0.4375, 0.9375, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.4375, -0.4375, 0.9375, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 0, 6, 5, 1, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5},
     ["vertex_list_0"] = { Vec3(0.0625, 0.0625, 0.0625), Vec3(-0.0625, 0.0625, 0.0625), Vec3(-0.0625, -0.0625, 0.0625), Vec3(0.0625, -0.0625, 0.0625), Vec3(-0.0625, -0.0625, -0.0625), Vec3(-0.0625, 0.0625, -0.0625), Vec3(0.0625, 0.0625, -0.0625), Vec3(0.0625, -0.0625, -0.0625)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/box0.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/box1") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.3125, -0.4375, 0.8125, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.3125, -0.4375, 0.8125, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.3125, -0.4375, 0.8125, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 0, 6, 5, 1, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5},
     ["vertex_list_0"] = { Vec3(0.0625, 0.0625, 0.0625), Vec3(-0.0625, 0.0625, 0.0625), Vec3(-0.0625, -0.0625, 0.0625), Vec3(0.0625, -0.0625, 0.0625), Vec3(-0.0625, -0.0625, -0.0625), Vec3(-0.0625, 0.0625, -0.0625), Vec3(0.0625, 0.0625, -0.0625), Vec3(0.0625, -0.0625, -0.0625)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/box1.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/box2") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.1875, -0.4375, 0.6875, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.1875, -0.4375, 0.6875, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.1875, -0.4375, 0.6875, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 0, 6, 5, 1, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5},
     ["vertex_list_0"] = { Vec3(0.0625, 0.0625, 0.0625), Vec3(-0.0625, 0.0625, 0.0625), Vec3(-0.0625, -0.0625, 0.0625), Vec3(0.0625, -0.0625, 0.0625), Vec3(-0.0625, -0.0625, -0.0625), Vec3(-0.0625, 0.0625, -0.0625), Vec3(0.0625, 0.0625, -0.0625), Vec3(0.0625, -0.0625, -0.0625)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/box2.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/box3") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.0625, -0.4375, 0.5625, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.0625, -0.4375, 0.5625, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.0625, -0.4375, 0.5625, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 0, 6, 5, 1, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5},
     ["vertex_list_0"] = { Vec3(0.0625, 0.0625, 0.0625), Vec3(-0.0625, 0.0625, 0.0625), Vec3(-0.0625, -0.0625, 0.0625), Vec3(0.0625, -0.0625, 0.0625), Vec3(-0.0625, -0.0625, -0.0625), Vec3(-0.0625, 0.0625, -0.0625), Vec3(0.0625, 0.0625, -0.0625), Vec3(0.0625, -0.0625, -0.0625)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/box3.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/box4") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0625, -0.4375, 0.4375, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0625, -0.4375, 0.4375, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0625, -0.4375, 0.4375, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 0, 6, 5, 1, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5},
     ["vertex_list_0"] = { Vec3(0.0625, 0.0625, 0.0625), Vec3(-0.0625, 0.0625, 0.0625), Vec3(-0.0625, -0.0625, 0.0625), Vec3(0.0625, -0.0625, 0.0625), Vec3(-0.0625, -0.0625, -0.0625), Vec3(-0.0625, 0.0625, -0.0625), Vec3(0.0625, 0.0625, -0.0625), Vec3(0.0625, -0.0625, -0.0625)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/box4.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/box5") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1875, -0.4375, 0.3125, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1875, -0.4375, 0.3125, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1875, -0.4375, 0.3125, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 0, 6, 5, 1, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5},
     ["vertex_list_0"] = { Vec3(0.0625, 0.0625, 0.0625), Vec3(-0.0625, 0.0625, 0.0625), Vec3(-0.0625, -0.0625, 0.0625), Vec3(0.0625, -0.0625, 0.0625), Vec3(-0.0625, -0.0625, -0.0625), Vec3(-0.0625, 0.0625, -0.0625), Vec3(0.0625, 0.0625, -0.0625), Vec3(0.0625, -0.0625, -0.0625)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/box5.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/box6") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.3125, -0.4375, 0.1875, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.3125, -0.4375, 0.1875, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.3125, -0.4375, 0.1875, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 0, 6, 5, 1, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5},
     ["vertex_list_0"] = { Vec3(0.0625, 0.0625, 0.0625), Vec3(-0.0625, 0.0625, 0.0625), Vec3(-0.0625, -0.0625, 0.0625), Vec3(0.0625, -0.0625, 0.0625), Vec3(-0.0625, -0.0625, -0.0625), Vec3(-0.0625, 0.0625, -0.0625), Vec3(0.0625, 0.0625, -0.0625), Vec3(0.0625, -0.0625, -0.0625)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/box6.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/box7") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4375, -0.4375, 0.0625, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4375, -0.4375, 0.0625, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4375, -0.4375, 0.0625, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 0, 6, 5, 1, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5},
     ["vertex_list_0"] = { Vec3(0.0625, 0.0625, 0.0625), Vec3(-0.0625, 0.0625, 0.0625), Vec3(-0.0625, -0.0625, 0.0625), Vec3(0.0625, -0.0625, 0.0625), Vec3(-0.0625, -0.0625, -0.0625), Vec3(-0.0625, 0.0625, -0.0625), Vec3(0.0625, 0.0625, -0.0625), Vec3(0.0625, -0.0625, -0.0625)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/box7.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/floorGeom/_") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.5, 0.5, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.5, 0.5, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.5, 0.5, 1),
     ["face_vertex_count"] = { 4},
     ["vertices_by_index"] = { 0, 1, 3, 2},
     ["vertex_list_0"] = { Vec3(-0.5, 0, 0.5), Vec3(0.5, 0, 0.5), Vec3(-0.5, 0, -0.5), Vec3(0.5, 0, -0.5)},
@@ -95,7 +103,7 @@ RdlMeshGeometry("/floorGeom/_") {
 }
 
 RdlMeshGeometry("/wallGeom/_") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 2.2204460492503131e-16, 1, 0, 0, -1, 2.2204460492503131e-16, 0, 0, 0, 0, 1), Mat4(1, 0, 0, 0, 0, 2.2204460492503131e-16, 1, 0, 0, -1, 2.2204460492503131e-16, 0, 0, 0, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 2.2204460492503131e-16, 1, 0, 0, -1, 2.2204460492503131e-16, 0, 0, 0, 0, 1),
     ["face_vertex_count"] = { 4},
     ["vertices_by_index"] = { 0, 1, 3, 2},
     ["vertex_list_0"] = { Vec3(-0.5, 0, 0.5), Vec3(0.5, 0, 0.5), Vec3(-0.5, 0, -0.5), Vec3(0.5, 0, -0.5)},
@@ -147,28 +155,46 @@ LightSet("LightSet0C05F3") {
     EnvLight("/l0"),
 }
 
-PerspectiveCamera("/camera") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1)),
+PerspectiveCamera("/DEFAULT/primaryCamera") {
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1),
     ["near"] = 0.100000001,
     ["mb_shutter_open"] = 0,
     ["mb_shutter_close"] = 0,
-    ["focal"] = blur(10, 10),
+    ["focal"] = 10,
     ["film_width_aperture"] = 10.0062494,
     ["dof"] = true,
     ["dof_aperture"] = 4,
     ["dof_focus_distance"] = 1,
 }
 
-PerspectiveCamera("/DEFAULT/primaryCamera") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1)),
+PerspectiveCamera("/camera") {
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1),
     ["near"] = 0.100000001,
     ["mb_shutter_open"] = 0,
     ["mb_shutter_close"] = 0,
-    ["focal"] = blur(10, 10),
+    ["focal"] = 10,
     ["film_width_aperture"] = 10.0062494,
     ["dof"] = true,
     ["dof_aperture"] = 4,
     ["dof_focus_distance"] = 1,
+}
+
+UserData("/floorGeom/_.primvars:primId") {
+    ["float_key"] = "primId",
+    ["float_values_0"] = { 0},
+    ["rate"] = "constant",
+}
+
+UserData("/box5.primvars:primId") {
+    ["float_key"] = "primId",
+    ["float_values_0"] = { 7},
+    ["rate"] = "constant",
+}
+
+UserData("/box2.primvars:primId") {
+    ["float_key"] = "primId",
+    ["float_values_0"] = { 4},
+    ["rate"] = "constant",
 }
 
 UserData("/box3.primvars:primId") {
@@ -177,9 +203,9 @@ UserData("/box3.primvars:primId") {
     ["rate"] = "constant",
 }
 
-UserData("/floorGeom/_.primvars:primId") {
+UserData("/box4.primvars:primId") {
     ["float_key"] = "primId",
-    ["float_values_0"] = { 0},
+    ["float_values_0"] = { 6},
     ["rate"] = "constant",
 }
 
@@ -190,9 +216,9 @@ RenderOutput("/_outputs/elementId") {
     ["math_filter"] = "closest",
 }
 
-UserData("/box4.primvars:primId") {
+UserData("/box0.primvars:primId") {
     ["float_key"] = "primId",
-    ["float_values_0"] = { 6},
+    ["float_values_0"] = { 2},
     ["rate"] = "constant",
 }
 
@@ -203,34 +229,15 @@ RenderOutput("/_outputs/instanceId") {
     ["math_filter"] = "closest",
 }
 
-UserData("/box7.primvars:primId") {
-    ["float_key"] = "primId",
-    ["float_values_0"] = { 9},
-    ["rate"] = "constant",
-}
-
-UserData("/box2.primvars:primId") {
-    ["float_key"] = "primId",
-    ["float_values_0"] = { 4},
-    ["rate"] = "constant",
-}
-
 RenderOutput("/_outputs/depth") {
     ["result"] = "depth",
     ["file_name"] = "/tmp/scene.exr",
     ["math_filter"] = "min",
 }
 
-UserData("/box1.primvars:primId") {
-    ["float_key"] = "primId",
-    ["float_values_0"] = { 3},
-    ["rate"] = "constant",
-}
-
-RenderOutput("/_outputs/primId") {
+RenderOutput("/_outputs/instanceIdA") {
     ["result"] = "primitive attribute",
-    ["primitive_attribute"] = "primId",
-    ["file_name"] = "/tmp/scene.exr",
+    ["primitive_attribute"] = "instanceIdA",
     ["math_filter"] = "closest",
 }
 
@@ -240,9 +247,9 @@ UserData("/wallGeom/_.primvars:primId") {
     ["rate"] = "constant",
 }
 
-UserData("/box0.primvars:primId") {
+UserData("/box1.primvars:primId") {
     ["float_key"] = "primId",
-    ["float_values_0"] = { 2},
+    ["float_values_0"] = { 3},
     ["rate"] = "constant",
 }
 
@@ -252,14 +259,15 @@ UserData("/box6.primvars:primId") {
     ["rate"] = "constant",
 }
 
-UserData("/box5.primvars:primId") {
+UserData("/box7.primvars:primId") {
     ["float_key"] = "primId",
-    ["float_values_0"] = { 7},
+    ["float_values_0"] = { 9},
     ["rate"] = "constant",
 }
 
-RenderOutput("/_outputs/instanceIdA") {
+RenderOutput("/_outputs/primId") {
     ["result"] = "primitive attribute",
-    ["primitive_attribute"] = "instanceIdA",
+    ["primitive_attribute"] = "primId",
+    ["file_name"] = "/tmp/scene.exr",
     ["math_filter"] = "closest",
 }

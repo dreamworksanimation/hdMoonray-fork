@@ -7,7 +7,7 @@ SceneVariables {
 }
 
 AttributeMap("/DEFAULT/displayColorMap") {
-    ["default_value"] = bind(undef(), Rgb(0.5, 0.5, 0.5)),
+    ["default_value"] = Rgb(0.5, 0.5, 0.5),
     ["primitive_attribute_name"] = "displayColor",
 }
 
@@ -17,7 +17,7 @@ AttributeMap("/DEFAULT/displayOpacityMap") {
 }
 
 RdlMeshGeometry("/cube") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.5, 0, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.5, 0, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.5, 0, 0, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5, 6, 5, 1, 0},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
@@ -28,17 +28,18 @@ RdlMeshGeometry("/cube") {
 }
 
 RdlMeshGeometry("/cubeBilinear") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.5, 0, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.5, 0, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.5, 0, 0, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5, 6, 5, 1, 0},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
     ["subd_scheme"] = "bilinear",
     ["subd_fvar_linear"] = "corners plus1",
     ["primitive_attributes"] = { UserData("/cubeBilinear.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/cubeCatmull") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 0, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 0, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 0, 0, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5, 6, 5, 1, 0},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
@@ -47,7 +48,7 @@ RdlMeshGeometry("/cubeCatmull") {
 }
 
 RdlMeshGeometry("/cubeCatmullCreases") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 6, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 6, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 6, 0, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5, 6, 5, 1, 0},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
@@ -58,7 +59,7 @@ RdlMeshGeometry("/cubeCatmullCreases") {
 }
 
 RdlMeshGeometry("/cubeCatmullFaceVaryingAll") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 3, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 3, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.5, 3, 0, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5, 6, 5, 1, 0},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
@@ -67,7 +68,7 @@ RdlMeshGeometry("/cubeCatmullFaceVaryingAll") {
 }
 
 RdlMeshGeometry("/cubeCatmullSharpCorners") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.5, 3, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.5, 3, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.5, 3, 0, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5, 6, 5, 1, 0},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
@@ -78,7 +79,7 @@ RdlMeshGeometry("/cubeCatmullSharpCorners") {
 }
 
 RdlMeshGeometry("/cubeCatmullTriangleSmooth") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.5, 3, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.5, 3, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.5, 3, 0, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5, 6, 5, 1, 0},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
@@ -87,7 +88,7 @@ RdlMeshGeometry("/cubeCatmullTriangleSmooth") {
 }
 
 RdlMeshGeometry("/cubeFaceVaryingAll") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.5, 3, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.5, 3, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.5, 3, 0, 1),
     ["face_vertex_count"] = { 4, 4, 4, 4, 4, 4},
     ["vertices_by_index"] = { 0, 1, 2, 3, 4, 5, 6, 7, 4, 7, 3, 2, 0, 3, 7, 6, 4, 2, 1, 5, 6, 5, 1, 0},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
@@ -98,12 +99,13 @@ RdlMeshGeometry("/cubeFaceVaryingAll") {
 }
 
 RdlMeshGeometry("/cubeLoop") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.5, 0, 0, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.5, 0, 0, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.5, 0, 0, 1),
     ["face_vertex_count"] = { 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3},
     ["vertices_by_index"] = { 0, 1, 2, 2, 3, 0, 4, 5, 6, 6, 7, 4, 4, 7, 3, 3, 2, 4, 0, 3, 7, 7, 6, 0, 4, 2, 1, 1, 5, 4, 6, 5, 1, 1, 0, 6},
     ["vertex_list_0"] = { Vec3(1, 1, 1), Vec3(-1, 1, 1), Vec3(-1, -1, 1), Vec3(1, -1, 1), Vec3(-1, -1, -1), Vec3(-1, 1, -1), Vec3(1, 1, -1), Vec3(1, -1, -1)},
     ["subd_fvar_linear"] = "corners plus1",
     ["primitive_attributes"] = { UserData("/cubeLoop.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 RdlMeshGeometry("/plane") {
@@ -144,7 +146,7 @@ Layer("/DEFAULT/defaultLayer") {
 
 UsdPreviewSurface("/DEFAULT/defaultMaterial") {
     ["diffuseColor"] = bind(AttributeMap("/DEFAULT/displayColorMap"), Rgb(1, 1, 1)),
-    ["roughness"] = bind(undef(), 0.300000012),
+    ["roughness"] = 0.300000012,
     ["opacity"] = bind(AttributeMap("/DEFAULT/displayOpacityMap"), 1),
 }
 
@@ -158,40 +160,47 @@ LightSet("LightSet3AC404") {
     EnvLight("/defaultLight"),
 }
 
-PerspectiveCamera("/_UsdImaging_HdMoonrayRendererPlugin_0xID/camera") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, -0, 1, 0, 3, 2.949999988079071, 36.045249938964844, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, -0, 1, 0, 3, 2.949999988079071, 36.045249938964844, 1)),
-    ["far"] = 1000000,
-    ["mb_shutter_open"] = 0,
-    ["mb_shutter_close"] = 0,
-    ["focal"] = blur(50, 50),
-    ["film_width_aperture"] = 20.9702396,
-}
-
 PerspectiveCamera("/DEFAULT/primaryCamera") {
-    ["node_xform"] = blur(Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, -0, 1, 0, 3, 2.949999988079071, 36.045249938964844, 1), Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, -0, 1, 0, 3, 2.949999988079071, 36.045249938964844, 1)),
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, -0, 1, 0, 3, 2.949999988079071, 36.045249938964844, 1),
     ["far"] = 1000000,
     ["mb_shutter_open"] = 0,
     ["mb_shutter_close"] = 0,
-    ["focal"] = blur(50, 50),
+    ["focal"] = 50,
     ["film_width_aperture"] = 20.9702396,
 }
 
-UserData("/plane.primvars:primId") {
-    ["float_key"] = "primId",
-    ["float_values_0"] = { 9},
-    ["rate"] = "constant",
-}
-
-UserData("/cube.primvars:primId") {
-    ["float_key"] = "primId",
-    ["float_values_0"] = { 0},
-    ["rate"] = "constant",
+PerspectiveCamera("/_UsdImaging_HdMoonrayRendererPlugin_0xID/camera") {
+    ["node_xform"] = Mat4(1, 0, 0, 0, 0, 1, 0, 0, 0, -0, 1, 0, 3, 2.949999988079071, 36.045249938964844, 1),
+    ["far"] = 1000000,
+    ["mb_shutter_open"] = 0,
+    ["mb_shutter_close"] = 0,
+    ["focal"] = 50,
+    ["film_width_aperture"] = 20.9702396,
 }
 
 UserData("/cubeCatmullTriangleSmooth.primvars:primId") {
     ["float_key"] = "primId",
     ["float_values_0"] = { 6},
     ["rate"] = "constant",
+}
+
+UserData("/cubeCatmullCreases.primvars:primId") {
+    ["float_key"] = "primId",
+    ["float_values_0"] = { 8},
+    ["rate"] = "constant",
+}
+
+RenderOutput("/_outputs/primId") {
+    ["result"] = "primitive attribute",
+    ["primitive_attribute"] = "primId",
+    ["file_name"] = "/tmp/scene.exr",
+    ["math_filter"] = "closest",
+}
+
+RenderOutput("/_outputs/instanceIdA") {
+    ["result"] = "primitive attribute",
+    ["primitive_attribute"] = "instanceIdA",
+    ["math_filter"] = "closest",
 }
 
 UserData("/cubeLoop.primvars:primId") {
@@ -213,6 +222,12 @@ UserData("/plane.primvars:displayColor") {
     ["rate"] = "vertex",
 }
 
+UserData("/cube.primvars:primId") {
+    ["float_key"] = "primId",
+    ["float_values_0"] = { 0},
+    ["rate"] = "constant",
+}
+
 RenderOutput("/_outputs/instanceId") {
     ["result"] = "primitive attribute",
     ["primitive_attribute"] = "instanceId",
@@ -220,28 +235,9 @@ RenderOutput("/_outputs/instanceId") {
     ["math_filter"] = "closest",
 }
 
-RenderOutput("/_outputs/primId") {
-    ["result"] = "primitive attribute",
-    ["primitive_attribute"] = "primId",
-    ["file_name"] = "/tmp/scene.exr",
-    ["math_filter"] = "closest",
-}
-
 UserData("/cubeFaceVaryingAll.primvars:primId") {
     ["float_key"] = "primId",
     ["float_values_0"] = { 4},
-    ["rate"] = "constant",
-}
-
-UserData("/cubeCatmull.primvars:primId") {
-    ["float_key"] = "primId",
-    ["float_values_0"] = { 1},
-    ["rate"] = "constant",
-}
-
-UserData("/cubeCatmullFaceVaryingAll.primvars:primId") {
-    ["float_key"] = "primId",
-    ["float_values_0"] = { 5},
     ["rate"] = "constant",
 }
 
@@ -257,20 +253,26 @@ UserData("/cubeCatmullSharpCorners.primvars:primId") {
     ["rate"] = "constant",
 }
 
-UserData("/cubeCatmullCreases.primvars:primId") {
+UserData("/plane.primvars:primId") {
     ["float_key"] = "primId",
-    ["float_values_0"] = { 8},
+    ["float_values_0"] = { 9},
     ["rate"] = "constant",
 }
 
-RenderOutput("/_outputs/instanceIdA") {
-    ["result"] = "primitive attribute",
-    ["primitive_attribute"] = "instanceIdA",
-    ["math_filter"] = "closest",
+UserData("/cubeCatmullFaceVaryingAll.primvars:primId") {
+    ["float_key"] = "primId",
+    ["float_values_0"] = { 5},
+    ["rate"] = "constant",
 }
 
 UserData("/cubeBilinear.primvars:primId") {
     ["float_key"] = "primId",
     ["float_values_0"] = { 3},
+    ["rate"] = "constant",
+}
+
+UserData("/cubeCatmull.primvars:primId") {
+    ["float_key"] = "primId",
+    ["float_values_0"] = { 1},
     ["rate"] = "constant",
 }

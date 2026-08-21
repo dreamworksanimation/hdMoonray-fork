@@ -22,6 +22,7 @@ RdlMeshGeometry("/wall") {
     ["vertex_list_0"] = { Vec3(10, 4, 0), Vec3(-10, 4, 0), Vec3(-10, -4, 0), Vec3(10, -4, 0)},
     ["subd_scheme"] = "bilinear",
     ["primitive_attributes"] = { UserData("/wall.primvars:primId")},
+    ["smooth_normal"] = false,
 }
 
 GeometrySet("/DEFAULT/allGeometry") {
@@ -74,6 +75,12 @@ PerspectiveCamera("/_UsdImaging_HdMoonrayRendererPlugin_0xID/camera") {
     ["film_width_aperture"] = 20.9702396,
 }
 
+UserData("/wall.primvars:primId") {
+    ["float_key"] = "primId",
+    ["float_values_0"] = { 0},
+    ["rate"] = "constant",
+}
+
 RenderOutput("/_outputs/instanceId") {
     ["result"] = "primitive attribute",
     ["primitive_attribute"] = "instanceId",
@@ -81,9 +88,9 @@ RenderOutput("/_outputs/instanceId") {
     ["math_filter"] = "closest",
 }
 
-RenderOutput("/_outputs/elementId") {
+RenderOutput("/_outputs/primId") {
     ["result"] = "primitive attribute",
-    ["primitive_attribute"] = "elementId",
+    ["primitive_attribute"] = "primId",
     ["file_name"] = "/tmp/scene.exr",
     ["math_filter"] = "closest",
 }
@@ -94,17 +101,11 @@ RenderOutput("/_outputs/depth") {
     ["math_filter"] = "min",
 }
 
-RenderOutput("/_outputs/primId") {
+RenderOutput("/_outputs/elementId") {
     ["result"] = "primitive attribute",
-    ["primitive_attribute"] = "primId",
+    ["primitive_attribute"] = "elementId",
     ["file_name"] = "/tmp/scene.exr",
     ["math_filter"] = "closest",
-}
-
-UserData("/wall.primvars:primId") {
-    ["float_key"] = "primId",
-    ["float_values_0"] = { 0},
-    ["rate"] = "constant",
 }
 
 RenderOutput("/_outputs/instanceIdA") {

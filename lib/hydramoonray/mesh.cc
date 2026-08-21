@@ -203,20 +203,11 @@ HdMoonray_Mesh::syncSubdivScheme(const HdMeshTopology& topology,
     // There is a topology.GetRefineLevel() but it appears to always be a copy of
     // the parameter (which defaults to 0) sent to GetMeshTopology()
     int refineLevel = GetDisplayStyle(sceneDelegate).refineLevel;
-
-    // We render as polygons if:
-    // - the repr has flat shading enabled
-    // - the user has forced polygon rendering
-    // - the subd scheme is "none"
-    // - refineLevel is 0
-    bool flatPolygons = _GetReprDesc(reprToken)[0].flatShadingEnabled ||
-                       renderDelegate.options().getForcePolygon() ||
-                       subdScheme == PxOsdOpenSubdivTokens->none;
-    bool smoothPolygons = !flatPolygons && 
-                          rdlScheme == rdlSubdSchemeCatClark &&
-                          refineLevel == 0;
-
-    bool polygons = flatPolygons || smoothPolygons;
+    bool flatShading = _GetReprDesc(reprToken)[0].flatShadingEnabled;
+    bool polygons =  flatShading ||
+                     renderDelegate.options().getForcePolygon() ||
+                     subdScheme == PxOsdOpenSubdivTokens->none ||
+                     refineLevel == 0;
     mGeometry.set(rdlAttrIsSubd, !polygons);
 
     // mesh resolution, adaptive error and smooth_normals can be overridden
@@ -238,7 +229,10 @@ HdMoonray_Mesh::syncSubdivScheme(const HdMeshTopology& topology,
     }
 
     if (not isPrimvarUsed(smoothNormalToken)) {
-        mGeometry.set(rdlAttrSmoothNormal, smoothPolygons);
+        bool smooth = (subdScheme == PxOsdOpenSubdivTokens->catmullClark) &&
+                      !flatShading;
+        std::cout << "Mesh " << GetId() << ": smooth normals = " << smooth << std::endl;
+        mGeometry.set(rdlAttrSmoothNormal, smooth);
     }
 }
 
