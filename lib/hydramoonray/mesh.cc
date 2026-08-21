@@ -231,7 +231,6 @@ HdMoonray_Mesh::syncSubdivScheme(const HdMeshTopology& topology,
     if (not isPrimvarUsed(smoothNormalToken)) {
         bool smooth = (subdScheme == PxOsdOpenSubdivTokens->catmullClark) &&
                       !flatShading;
-        std::cout << "Mesh " << GetId() << ": smooth normals = " << smooth << std::endl;
         mGeometry.set(rdlAttrSmoothNormal, smooth);
     }
 }
